@@ -2,6 +2,30 @@ const btn  = document.querySelector('#btn');
 const btn2 = document.querySelector('#btn2');
 const btn3 = document.querySelector('#btn3');
 
+const alertMessage = [
+    {
+        msg: 'Smoke weed'
+    },
+    {
+        msg: 'Drink beer'
+    },
+    {
+        msg: 'Cry'
+    },
+    {
+        msg: 'Go back to bed'
+    },
+    {
+        msg: 'Drink coffee'
+    },
+];
+
+const alertPopupMsg = function(msgArray){
+    return msgArray[Math.floor(Math.random() * msgArray.length)].msg;
+}
+
+getMessage = alertPopupMsg(alertMessage);
+
 // handle click button
 
 btn.onclick = function () {
@@ -13,7 +37,7 @@ btn.onclick = function () {
         }
     }
     if(selectedValue==='no'){
-        alert("Drink coffee");
+        alert(getMessage);
         radioBtn.remove();
     }
     else{ 
@@ -55,7 +79,7 @@ btn3.onclick = function () {
         alert("Drink coffee & read mail")
     }
     else{
-        alert("Drink coffee")
+        alert(getMessage)
     }
     radioBtn3.remove();
 }
