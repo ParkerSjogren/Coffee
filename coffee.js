@@ -20,10 +20,7 @@ const alertMessage = [
     },
 ];
 
-<<<<<<< HEAD
 // our random message
-=======
->>>>>>> e7a1e167047e8d488315228b30bd26826c16d3e3
 const alertPopupMsg = function(msgArray){
     return msgArray[Math.floor(Math.random() * msgArray.length)].msg;
 }
