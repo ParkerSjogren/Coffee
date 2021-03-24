@@ -20,6 +20,7 @@ const alertMessage = [
     },
 ];
 
+// our random message
 const alertPopupMsg = function(msgArray){
     return msgArray[Math.floor(Math.random() * msgArray.length)].msg;
 }
